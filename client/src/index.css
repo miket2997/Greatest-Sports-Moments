@@ -1,0 +1,715 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald&display=swap');
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  font-family: 'Oswald', sans-serif;
+  letter-spacing: 1px;
+}
+/* All buttons */
+button {
+  cursor: pointer;
+}
+
+/* Navbar */
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  padding: 20px 0;
+  font-size: 30px;
+  background: linear-gradient(to bottom, #333399, #6699cc);
+  color: red;
+  font-weight: 800;
+}
+
+.nav > button {
+  padding: 0;
+  background: none;
+  border: none;
+  font-size: 30px;
+  color: red;
+  font-weight: 800;
+}
+
+.nav > a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Auth/Home page */
+.auth--container {
+  min-height: 100vh;
+  height: auto;
+  background-image: url("./images/cbp.JPG");
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 30px;
+}
+
+.auth--container > h1 {
+  color: white;
+  margin-top: 10px;
+  text-align: center;
+}
+
+.auth--form {
+  display: flex;
+  flex-direction: column;
+  background-color: rgb(248, 233, 233);
+  padding: 30px;
+  border: none;
+  border-radius: 10px;
+  font-size: larger;
+  margin: 20px 0;
+}
+
+.auth--form > input {
+  margin: 5px 0;
+  padding: 5px;
+  border-radius: 5px;
+  border: 1px solid blue;
+}
+
+.auth--form > input:focus {
+  background-color: yellow;
+  outline: none;
+}
+
+.submit--auth--btn, .toggle--auth--btn {
+  margin: 5px 0;
+  width: fit-content;
+  justify-content: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.submit--auth--btn {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  background-color: green;
+  color: white;
+}
+
+.submit--auth--btn:hover {
+  background-color: rgb(0, 82, 0);
+}
+
+.toggle--auth--btn {
+  padding: 0;
+  background: none;
+  border: none;
+  font-size: large;
+  text-decoration: underline;
+}
+
+.date--input::before{
+  content: "Birthday";
+  margin-right: 10px;
+  color: rgb(128, 127, 127);
+}
+
+
+/* Profile */
+.profile--container {
+  background: linear-gradient(to bottom, #000033, #003366);
+  min-height: 210vh;
+  height: auto;
+  color: whitesmoke;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 30px;
+  text-align: center;
+}
+
+.profile--container > h1 {
+  margin: 10px 0;
+  font-size: 40px;
+  border-bottom: 1px solid red;
+}
+
+.navigate--profile {
+  padding: 0;
+  color: whitesmoke;
+  border: none;
+  background: none;
+  text-decoration: underline;
+  font-size: larger;
+  margin: 10px 0;
+}
+ 
+.profile--container > h3,
+.profile--container > h4,
+.user--info {
+  margin: 10px 0;
+  font-size: xx-large;
+}
+
+.user--info {
+  list-style-type: none;
+  background-color: #ffdede;
+  color: black;
+  border: none;
+  border-radius: 10px;
+  width: 60%;
+  padding: 30px;
+}
+
+.user--info > p {
+  margin: 20px 0;
+  text-align: left;
+  border-bottom: 1px solid;
+}
+
+.user--info > h4 {
+  text-align: left;
+  margin: 10px 0;
+  padding: 20px 0;
+  color: rgb(27, 134, 75);
+}
+
+.favorite--leagues, .favorite--teams {
+  list-style-type: circle;
+  text-align: left;
+}
+
+.favorite--leagues {
+  border-bottom: 1px dashed;
+}
+
+.favorite--leagues > li, .favorite--teams > li {
+  margin: 20px 0;
+}
+
+.select--container {
+  margin: 30px 0;
+  font-size: x-large;
+}
+
+.select--container > form {
+  margin-bottom: 30px;
+  padding: 30px;
+}
+
+.select--container > form > button {
+  margin-top: 30px;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  background-color: green;
+  color: white;
+}
+
+.logout--btn--profile {
+  padding: 10px 20px;
+  font-size: x-large;
+  border-radius: 5px;
+  background-color: red;
+  color: whitesmoke;
+  border: none;
+}
+
+.logout--btn--profile:hover {
+  background-color: rgb(198, 0, 0);
+}
+
+/* Landing Page */
+.landing--page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: linear-gradient(to bottom, #000033, #003366);
+  height: auto;
+  min-height: 100vh;
+  color: whitesmoke;
+}
+
+.landing--page > button {
+  padding: 0;
+  color: whitesmoke;
+  border: none;
+  background: none;
+  text-decoration: underline;
+  font-size: larger;
+}
+
+.landing--page > h1 {
+  margin-top: 10px;
+  text-align: center;
+}
+
+.landing--page > p {
+  margin: 10px;
+  padding: 0 10px;
+}
+
+.photo--container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+.photo--container > img {
+  object-fit: cover;
+  height: 300px;
+  width: 300px;
+  margin: 20px;
+}
+
+/* Moment List */
+.moment--list {
+  background: linear-gradient(to bottom, #000033, #003366);
+  height: auto;
+  min-height: 95vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 30px;
+}
+
+.moment--list--header {
+  color: white;
+  margin-top: 30px;
+  text-align: center;
+}
+
+.toggle--moment--form {
+  padding: 0;
+  background: none;
+  border: none;
+  color: white;
+  text-decoration: underline;
+  font-size: larger;
+  margin-top: 20px;
+}
+
+.moments--h1 {
+  color: white;
+  text-align: center;
+  margin-top: 30px;
+}
+
+.moment--container {
+  margin: 30px 0;
+  border-bottom: 2px solid red;
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: white;
+  width: 90%;
+}
+
+.moment--container > h1,
+.moment--container > small,
+.moment--container > p {
+  margin: 10px 0;
+}
+
+.toggle--comment,
+.delete--moment--btn,
+.edit--moment--btn {
+  margin: 20px;
+  padding: 5px 20px;
+  border-radius: 5px;
+  border: none;
+}
+
+.toggle--comment {
+  background-color: green;
+  color: white;
+}
+
+.toggle--comment:hover {
+  background-color: rgb(0, 62, 0);
+}
+
+.delete--moment--btn {
+  background-color: red;
+  color: white;
+}
+
+.delete--moment--btn:hover {
+  background-color: rgb(115, 1, 1);
+}
+
+.edit--moment--btn {
+  background-color: blue;
+  color: white;
+}
+
+.edit--moment--btn:hover{
+  background-color: rgb(0, 0, 109);
+}
+
+.moment--btns {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.video--container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+/* Moment Form */
+.moment--form {
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  background-color: lightyellow;
+  margin-top: 20px;
+  border-radius: 20px;
+}
+
+.moment--form > input, .moment--form > textarea {
+  margin: 10px 0;
+  border-radius: 5px;
+  border: 1px solid black;
+}
+
+.moment--form > input:focus, .moment--form > textarea:focus {
+  background-color: rgb(250, 217, 217);
+}
+
+.moment--form > input {
+  padding: 5px;
+}
+
+.moment--form > textarea {
+  padding: 5px;
+  height: auto;
+  width: auto;
+  height: 100px;
+}
+
+.submit--moment {
+  margin: 10px 0;
+  background-color: green;
+  color: white;
+  width: fit-content;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 5px 20px;
+  font-size: large;
+  border: none;
+  border-radius: 5px;
+}
+
+.submit--moment:hover {
+  background-color: rgb(0, 92, 0);
+}
+
+.cancel--moment--form {
+  margin: 10px 0;
+  background-color: red;
+  color: white;
+  width: fit-content;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 5px 20px;
+  font-size: large;
+  border: none;
+  border-radius: 5px;
+}
+
+.cancel--moment--form:hover {
+  background-color: rgb(173, 1, 1);
+}
+
+/* Edit moment form */
+.edit--moment--form {
+  display: flex;
+  flex-direction: column;
+  width: 400px;
+  padding: 30px;
+  background-color: lightyellow;
+  color: black;
+  margin: 30px auto;
+  border-radius: 20px;
+}
+
+.edit--moment--form > input {
+  margin-bottom: 10px;
+  padding: 5px;
+  border: 1px solid;
+  border-radius: 5px;
+}
+
+.edit--moment--form > textarea {
+  margin-bottom: 10px;
+  padding: 5px;
+  border: 1px solid;
+  border-radius: 5px;
+  height: 130px;
+}
+
+.edit--moment--form > input:focus, .edit--moment--form > textarea:focus {
+  background-color: rgb(250, 217, 217);
+}
+
+.submit--edit {
+  margin: 10px auto;
+  width: fit-content;
+  padding: 5px 20px;
+  margin-left: auto;
+  margin-right: auto;
+  border: none;
+  background-color: green;
+  color: white;
+  font-size: large;
+  border-radius: 5px;
+}
+
+.submit--edit:hover {
+  background-color: rgb(0, 59, 0);
+}
+
+.cancel--edit {
+  margin: 10px auto;
+  width: fit-content; 
+  padding: 5px 20px;
+  border: none;
+  background-color: red;
+  color: white;
+  font-size: large;
+  border-radius: 5px;
+}
+
+.cancel--edit:hover {
+  background-color: rgb(134, 0, 0);
+}
+
+/* Comment Form */
+.comment--form {
+  display: flex;
+  flex-direction: column;
+  margin-top: 30px;
+  padding: 30px;
+  background-color: lightblue;
+  border-radius: 20px;
+}
+
+.comment--form > textarea {
+  width: 400px;
+  margin: 10px 0;
+  height: 100px;
+  border: 1px solid;
+}
+
+.comment--form > textarea:focus {
+  background-color: rgb(250, 217, 217);
+  outline: none;
+  text-indent: 2px;
+}
+
+.submit--comment {
+  padding: 5px 20px;
+  margin: 10px auto;
+  background-color: green;
+  color: white;
+  width: fit-content;
+  border: none;
+  border-radius: 5px;
+}
+
+.submit--comment:hover {
+  background-color: rgb(0, 63, 0);
+}
+
+.cancel--comment {
+  padding: 5px 20px;
+  margin: 10px auto;
+  background-color: red;
+  color: white;
+  width: fit-content;
+  border: none;
+  border-radius: 5px;
+}
+
+.cancel--comment:hover {
+  background-color: rgb(133, 1, 1);
+}
+
+/* Comments */
+.comment--container {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  padding: 30px;
+  margin: 20px;
+  background-color: #deffee;
+  width: 75%;
+}
+
+.comment--container > small, .comment--container > p {
+  margin: 10px 0;
+}
+
+.delete--comment {
+  margin: 10px 0;
+  padding: 5px 10px;
+  background-color: red;
+  color: white;
+  width: fit-content;
+  border: none;
+  border-radius: 5px;
+}
+
+.delete--comment:hover {
+  background-color: rgb(125, 0, 0);
+}
+
+.edit--comment {
+  margin: 30px 0 10px 0;
+  padding: 5px 20px;
+  background-color: blue;
+  color: white;
+  width: fit-content;
+  border: none;
+  border-radius: 5px;
+}
+
+.edit--comment:hover {
+  background-color: rgb(0, 0, 125);
+}
+
+/* Edit Comment Form */
+.edit--comment--form {
+  display: flex;
+  flex-direction: column;
+  margin-top: 30px;
+  padding: 30px;
+  background-color: lightblue;
+  border-radius: 20px;
+  align-items: center;
+  width: fit-content;
+}
+
+.edit--comment--form > textarea {
+  width: 90%;
+  margin: 10px 0;
+  height: 100px;
+  border: 1px solid;
+  resize: none;
+}
+
+.edit--comment--form > textarea:focus {
+  background-color: rgb(250, 217, 217);
+  outline: none;
+  text-indent: 2px;
+}
+
+.submit--edit--comment {
+  width: fit-content;
+  padding: 5px 10px;
+  margin: 10px auto;
+  border: none;
+  border-radius: 5px;
+  background-color: green;
+  color: white;
+}
+
+.submit--edit--comment:hover {
+  background-color: rgb(0, 61, 0);
+}
+
+.cancel--comment--edit {
+  background-color: red;
+  border: none;
+  border-radius: 5px;
+  padding: 5px 10px;
+  margin: 10px auto;
+  color: white;
+  width: fit-content;
+}
+
+
+/* media queries */
+@media screen and (max-width: 500px){
+  .auth--container {
+    background-position: bottom;
+  }
+  .nav, .nav > button {
+    font-size: 20px;
+  }
+
+}
+
+@media screen and (max-width: 530px){
+  .profile--container {
+    min-height: 160vh;
+  }
+  .moment--btns > button {
+    padding: 5px 10px;
+    margin-left: 5px;
+    margin-right: 5px;
+  }
+  .edit--moment--form {
+    width: 100%;
+  }
+}
+
+@media screen and (min-width: 750px) and (max-width: 1050px){
+  .photo--container {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media screen and (max-width: 750px){
+  .photo--container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .photo--container > img {
+    width: 80%;
+    height: auto;
+  }
+  .user--info {
+    width: 90%;
+    font-size: 20px;
+  }
+ 
+
+@media screen and (max-width: 600px) {
+  .comment--form > textarea {
+    width: 100%;
+  }
+  .comment--form,
+  .edit--comment--form {
+    text-align: center;
+  }
+}
+}
+
+@media screen and (min-width: 1100px) {
+  .moment--container {
+    width: 1000px;
+  }
+}
+
+@media screen and (max-width: 430px){
+  .user--info {
+    font-size: 16px;
+  }
+  .moment--btns > button {
+    padding: 0;
+    background: none;
+    border: none;
+    color: black;
+    padding-right: 5px;
+    padding-left: 5px;
+  }
+  .moment--btns > button:hover {
+    background: none;
+    color: blue;
+  }
+}
