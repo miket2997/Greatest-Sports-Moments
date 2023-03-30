@@ -40,7 +40,8 @@ app.get("*", (req, res) => {
     res.sendFile(path.join(__dirname, "client", "build", "index.html"));
 });
 
-app.listen(9000, () => {
-    console.log("App is running on port 9000")
+const port = process.env.PORT || 9000
+app.listen(port, () => {
+    console.log(`App is running on port ${port}`)
 })
 
