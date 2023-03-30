@@ -4,12 +4,12 @@ const morgan = require("morgan");
 const { expressjwt } = require("express-jwt");
 const mongoose = require("mongoose");
 require("dotenv").config();
-const path = require("path");
+//const path = require("path");
 
 
 app.use(express.json());
 app.use(morgan("dev"));
-app.use(express.static(path.join(__dirname, "client", "build")));
+//app.use(express.static(path.join(__dirname, "client", "build")));
 
 
 
@@ -36,12 +36,12 @@ app.use((err, req, res, next) => {
 });
 
 
-app.get("*", (req, res) => {
-    res.sendFile(path.join(__dirname, "client", "build", "index.html"));
-});
+// app.get("*", (req, res) => {
+//     res.sendFile(path.join(__dirname, "client", "build", "index.html"));
+// });
 
-const port = process.env.PORT || 9000
-app.listen(port, () => {
-    console.log(`App is running on port ${port}`)
+//const port = process.env.PORT || 9000
+app.listen(9000, () => {
+    console.log(`App is running on port 9000`)
 })
 
