@@ -13,7 +13,7 @@ app.use(express.static(path.join(__dirname, "client", "build")));
 
 
 
-mongoose.connect(`mongodb+srv://miket2997:${process.env.PASSWORD}@cluster0.wawrkog.mongodb.net/sportsMoments?retryWrites=true&w=majority`)
+mongoose.connect(`mongodb+srv://${process.env.USERNAME}:${process.env.PASSWORD}@cluster0.wawrkog.mongodb.net/sportsMoments?retryWrites=true&w=majority`)
 .then(() => console.log("Connected to DB"))
 .catch(err => console.log(err))
 
