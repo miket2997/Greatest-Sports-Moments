@@ -12,7 +12,11 @@
   "version": "1.0.0",
   "main": "server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js",
+    "dev": "concurrently \"npm run start-server\" \"npm run start-client\"",
+    "start-server": "node server.js",
+    "start-client": "cd client && npm start"
   },
   "repository": {
     "type": "git",
@@ -25,5 +29,8 @@
     "url": "https://github.com/miket2997/Vschool-Level-6-Capstone/issues"
   },
   "homepage": "https://github.com/miket2997/Vschool-Level-6-Capstone#readme",
-  "description": ""
+  "description": "",
+  "devDependencies": {
+    "concurrently": "^8.0.1"
+  }
 }
