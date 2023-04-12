@@ -2,6 +2,7 @@ import React, { useContext } from "react";
 import Auth from "./components/Auth";
 import Profile from "./components/Profile";
 import Navbar from "./components/Navbar";
+import Footer from "./components/Footer";
 import LandingPage from "./components/LandingPage";
 import MomentList from "./components/MomentList";
 import { UserContext } from "./context/UserProvider";
@@ -17,7 +18,7 @@ function App() {
     <div className="App">
         { token && <Navbar logout={ logout } />}
         <Routes>
-          <Route path="/" element={ token ? <Navigate to="/profile" /> : <Auth /> } />
+          <Route path="/" element={ token ? <Navigate to="/home" /> : <Auth /> } />
           <Route path="/profile" element={ <ProtectedRoute token={ token } redirectTo="/">
             <Profile />
           </ProtectedRoute> } />
@@ -28,6 +29,7 @@ function App() {
             <MomentList />
           </ProtectedRoute>} />
         </Routes>
+        { token && <Footer /> }
     </div>
   );
 }

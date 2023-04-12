@@ -9,7 +9,8 @@ export default function LoginForm(props){
             username,
             password
         },
-        toggle
+        toggle,
+        errMsg
     } = props;
 
     return (
@@ -30,6 +31,7 @@ export default function LoginForm(props){
                 placeholder="Password"
             />
             <button className="submit--auth--btn">Login</button>
+            <p className="errMsg">{ errMsg }</p>
             <button className="toggle--auth--btn" type="button" onClick={() => toggle()}>Not a member?</button>
         </form>
     )

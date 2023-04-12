@@ -13,7 +13,8 @@ export default function SignUpForm(props){
             birthday,
             password
         },
-        toggle
+        toggle,
+        errMsg
     } = props;
 
 
@@ -74,6 +75,7 @@ export default function SignUpForm(props){
                 className="date--input"
             />
             <button className="submit--auth--btn">Sign up</button>
+            <p className="errMsg">{ errMsg }</p>
             <button className="toggle--auth--btn" onClick={() => toggle()} type="button">Already a member?</button>
         </form>
     )

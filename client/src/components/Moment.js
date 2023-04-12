@@ -71,7 +71,7 @@ export default function Moment(props){
 
     return (
         <div className="moment--container" key={props._id}>
-            <h1>{ props.title }: {props.year}</h1>
+            <h1 style={{textAlign: "center"}}>{ props.title }: {props.year}</h1>
             <small>Posted on: {changeDateFormat(props.postedAt)} by: { props.user.username }</small>
             <small>Likes: {props.likes.length}</small>
             <FontAwesomeIcon 
@@ -79,11 +79,12 @@ export default function Moment(props){
                 icon={faHeart} 
                 style={ hasLiked ? {color: "blue", cursor: "pointer"} : {color: "lightblue", cursor:"pointer"}} size="2x" />
             <p>{props.description}</p>
-            <div className="video--container">
+            <div className="player-wrapper">
                 <ReactPlayer 
                     url={props.videoUrl}
+                    
                     controls={true}
-                    className="video"
+                    className="react-player"
                     config={{
                         file: {
                             attributes: {

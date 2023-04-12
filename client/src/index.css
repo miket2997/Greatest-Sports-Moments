@@ -11,6 +11,15 @@ button {
   cursor: pointer;
 }
 
+/* Footer */
+footer {
+  background: linear-gradient(to bottom, #333399, #6699cc);
+  padding: 20px 0;
+  text-align: center;
+  color: red;
+  font-weight: 800;
+}
+
 /* Navbar */
 .nav {
   display: flex;
@@ -80,11 +89,9 @@ button {
 }
 
 .submit--auth--btn, .toggle--auth--btn {
-  margin: 5px 0;
+  margin: 5px auto;
   width: fit-content;
   justify-content: center;
-  margin-left: auto;
-  margin-right: auto;
 }
 
 .submit--auth--btn {
@@ -113,6 +120,11 @@ button {
   color: rgb(128, 127, 127);
 }
 
+.errMsg {
+  color: red;
+  margin: 5px auto;
+  text-align: center;
+}
 
 /* Profile */
 .profile--container {
@@ -227,6 +239,7 @@ button {
   height: auto;
   min-height: 100vh;
   color: whitesmoke;
+  padding: 10px;
 }
 
 .landing--page > button {
@@ -302,7 +315,7 @@ button {
   flex-direction: column;
   align-items: center;
   background-color: white;
-  width: 90%;
+  width: 100%;
 }
 
 .moment--container > h1,
@@ -352,12 +365,6 @@ button {
   justify-content: space-evenly;
 }
 
-.video--container {
-  width: 100%;
-  height: 100%;
-  display: flex;
-  justify-content: center;
-}
 
 /* Moment Form */
 .moment--form {
@@ -640,7 +647,9 @@ button {
   .nav, .nav > button {
     font-size: 20px;
   }
-
+  footer {
+    font-size: 14px;
+  }
 }
 
 @media screen and (max-width: 530px){
@@ -692,7 +701,7 @@ button {
 
 @media screen and (min-width: 1100px) {
   .moment--container {
-    width: 1000px;
+    width: 90%;
   }
 }
 
@@ -711,5 +720,12 @@ button {
   .moment--btns > button:hover {
     background: none;
     color: blue;
+  }
+}
+
+@media screen and (max-width: 730px) {
+  .react-player {
+    height: 100% !important;
+    width: 100% !important;
   }
 }

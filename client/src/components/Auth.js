@@ -4,7 +4,7 @@ import SignUpForm from "./SignUpForm";
 import LoginForm from "./LoginForm";
 
 export default function Auth(){
-    const { signup, login } = useContext(UserContext);
+    const { signup, login, errMsg } = useContext(UserContext);
 
     // set initial state for sign up form
     const initSignUpInputs = {
@@ -77,6 +77,7 @@ export default function Auth(){
                     handleSubmit={handleSignUp}
                     inputs={signUpInputs}
                     toggle={handleAuthToggle}
+                    errMsg={errMsg}
                 />
             </>
             :
@@ -85,7 +86,8 @@ export default function Auth(){
                     handleChange={handleLoginChange}
                     handleSubmit={handleLogin}
                     inputs={loginInputs}
-                    toggle={handleAuthToggle} 
+                    toggle={handleAuthToggle}
+                    errMsg={errMsg} 
                 />
             </>
             }
