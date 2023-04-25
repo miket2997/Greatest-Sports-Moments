@@ -74,6 +74,7 @@ footer {
   border-radius: 10px;
   font-size: larger;
   margin: 20px 0;
+  max-width: 300px;
 }
 
 .auth--form > input {

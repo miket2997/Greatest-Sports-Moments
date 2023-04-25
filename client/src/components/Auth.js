@@ -22,8 +22,8 @@ export default function Auth(){
 
     // set initial state for login form
     const initLoginInputs = {
-        username: "",
-        password: ""
+        username: "demo",
+        password: "demo"
     };
     const [loginInputs, setLoginInputs] = useState(initLoginInputs);
 

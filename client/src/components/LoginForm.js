@@ -16,6 +16,7 @@ export default function LoginForm(props){
     return (
         <form className="auth--form" onSubmit={handleSubmit}>
             <label>Please enter your login info.</label>
+            <small style={{color: "darkgreen", marginBottom: "10px"}}>*For demo purposes, you can use the pre-filled inputs as login info.</small>
             <input
                 type="text"
                 name="username"
