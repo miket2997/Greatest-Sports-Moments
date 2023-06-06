@@ -54,7 +54,7 @@ export default function UserProvider(props){
 
     // create a login function
     function login(credentials){
-        userAxios.post("https://greatestsportsmoments.netlify.app/auth/login", credentials)
+        userAxios.post("/auth/login", credentials)
         .then(res => {
             const { user, token } = res.data;
             localStorage.setItem("token", token)
